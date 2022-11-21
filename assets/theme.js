@@ -7369,3 +7369,18 @@ function ownKeys(object, enumerableOnly) {var keys = Object.keys(object);if (Obj
 
 })(theme.jQuery);  
 /* Built with Barry v1.0.8 */
+
+
+$(document).on('click', '.ks-unit-toggle-label', function(){
+  $('.ks-unit-toggle-label').each(function(index){
+    if ($(this).hasClass('kiwi-active')){
+      $(this).removeClass('kiwi-active');
+      var target_class = 'ks-table-wrapper-' + $(this).data('id');
+      $('.' + target_class).removeClass('active');
+    }else{
+      $(this).addClass('kiwi-active');
+      var target_class = 'ks-table-wrapper-' + $(this).data('id');
+      $('.' + target_class).addClass('active');
+    }
+  })
+})
